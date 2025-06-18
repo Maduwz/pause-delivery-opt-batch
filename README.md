@@ -1,11 +1,20 @@
-# pause-delivery-opt-batch
-A simple batch script to pause Delivery Optimization service
-## Pause Delivery Optimization Service
+# StopDoSvc.bat - Pause Delivery Optimization
 
-This batch file pauses the Windows Delivery Optimization service.
+This batch script stops the **Delivery Optimization** service (`DoSvc`) on Windows. This service is responsible for peer-to-peer update sharing used by Windows Update and Microsoft Store.
 
-### How to use:
-1. Right click the file
+## 🛠 What It Does
+
+- Stops the `DoSvc` service using `net stop`
+- Changes the startup type to `manual` using `sc config`
+
+## ⚠️ Important Notes
+
+- Must be run as **Administrator**
+- Only temporarily pauses the service — it may restart after reboot unless disabled permanently.
+- Disabling this service may affect Windows Update delivery performance.
+
+## 💻 How to Use
+
+1. Right-click `StopDoSvc.bat`
 2. Select **Run as Administrator**
-
-**File**: `pause_delivery_opt.bat`
+3. Press an
